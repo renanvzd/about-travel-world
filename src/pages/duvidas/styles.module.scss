@@ -1,0 +1,200 @@
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: relative;
+}
+
+.duvidas {
+  max-width: 1000px;
+  margin: 3rem auto 0;
+
+  .titleSection {
+    max-width: 1000px;
+    
+    p {
+      font-size: 2.5rem;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 1.2rem;
+      
+      & + p {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+        font-size: 1.3rem;
+        text-align: justify;
+        line-height: 2.3rem;
+      }
+    }
+  }
+
+  .searchEngine {
+    padding-bottom: 4rem;
+    justify-content: left;
+    align-items: center;
+    margin: 0;
+    display: flex;
+
+    p {
+      color: #CDC8B1;
+      font-size: 1.2rem;
+      text-align: justify;
+      padding-right: 0.8rem;
+    }
+
+    input {
+      width: 400px;
+      height: 50px;
+      padding-left: 10px;
+      font-size: 1.2rem;
+
+      &:hover, &:focus, &:focus {
+        border: 2px solid green !important;
+       }
+    }  
+  }
+
+  .containerDuvidas {
+    margin: 0;
+    justify-content: center;
+  }
+
+  section {
+    display: block;
+    border: 1px solid;
+    border-top: 1px solid var(--gray-300);
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0.4em 0.1em 0.3em green;
+    background-color: #282a29; 
+    border-radius: 5px;
+
+    &:last-child {
+      border-bottom: 1px solid var(--gray-300);
+    }
+
+    time {
+      padding-top: 0.5rem;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      color: var(--gray-300);
+    }
+
+    .containerQuestion {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      align-items: center;
+      padding-right: 10px;
+    }
+
+    .titleQuestion {
+      display: block;
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+      line-height: 1rem;
+      transition: color 0.2s;
+      padding-right: 30px;
+      text-align: justify;
+    }
+
+    &:hover .titleQuestion {
+      color: var(--green-500);
+    }
+
+    p {
+      color: black;
+      margin: 1.5rem 0.1rem;
+      line-height: 1.7rem;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .excerpt {
+      margin: 1rem 0.5rem 1rem 0.5rem;
+      padding: 2px 20px 0.5px 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 0;
+    }
+  }
+}
+
+
+@media(max-width: 1050px) {
+  .container {
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+  }
+  
+  .duvidas {
+    margin: 3.5rem auto 0;
+  
+    .searchEngine {
+      padding-bottom: 3rem;
+      flex-direction: column;
+
+      p {
+        font-size: 1.2rem;
+        padding-bottom: 10px;
+        padding-right: 0rem;
+        text-align: left;
+      }
+  
+      input {
+        width: 250px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 1rem;
+        }  
+    }
+
+    .titleSection {
+      max-width: 1000px;
+      
+      p {
+        color: #e9f3e2;
+        font-size: 1.2rem;
+        justify-content: center;
+        text-align: center;
+        
+        & + p {
+          color: #cddac4;
+          padding-top: 2rem;
+          padding-bottom: 5rem;
+          font-size: 1rem;
+          text-align: justify;
+          line-height: 1.45rem;
+        }
+      }
+    }
+  
+    section {
+      padding: 1rem 0;
+  
+      time {
+        padding-top: 0.1rem;
+        padding-left: 10px;
+        font-size: 0.7rem;
+      }
+  
+      .titleQuestion {
+        width: 90%;
+        font-size: 1rem;
+        margin: 0.1rem 0 0rem 0;
+        padding: 1px 15px 3px 10px;
+        line-height: 1.5rem;
+      }
+  
+      p {
+        line-height: 1.2rem;
+        font-size: 0.9rem;
+      }
+  
+      .excerpt {
+        margin-bottom: 0rem;
+        padding: 2px 15px 0.5px 15px;
+      }
+    }
+  }
+}

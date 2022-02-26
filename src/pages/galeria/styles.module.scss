@@ -1,0 +1,107 @@
+.containerSection {
+  max-width: auto;
+  text-align: center;
+
+  .headerTitle {
+    margin: 0;
+    
+    h2 {
+      color: black;    
+      font-size: 2rem;
+      padding-top: 1.5rem;
+    }
+}
+
+  .contentSection {
+    margin: 0 2rem;
+    margin-bottom: 4rem;
+    max-width: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+  }
+
+  .contentItems {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: center;
+    align-items: center;
+
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  div {
+    gap: 3rem;  
+    margin: 0rem 2rem;
+    padding: 1rem 1rem;
+    color: var(--text-title);
+    
+    header {
+      align-items: center;
+      text-align: center;
+      
+      div {
+        width: 16rem;
+        height: 18rem;
+        background-color: rgba(173, 216, 230, 0.4);
+        cursor: pointer;
+        margin: 0rem 0rem;
+        padding-top: 2.5rem;
+
+        @media (max-width: 600px) {
+          width: 14rem;
+          height: 18rem;
+          padding-top: 2.5rem;
+        }
+        @media (max-width: 440px) {
+          padding-top: 1.5rem;
+        }
+        
+        @media (max-width: 440px) {
+          width: 12rem;
+          height: 12rem;
+        }
+
+        img {
+          flex-shrink: 0;
+          width: 8rem;
+          height: 8rem;
+          
+          @media (max-width: 440px) {
+            width: 6rem;
+            height: 5rem;
+          }
+        }
+      }
+      
+      p {
+        padding-top: 1rem;
+        display: block;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: black;
+
+        @media (max-width: 600px) {
+          font-size: 1.2rem;
+          padding-top: .9rem;
+        }
+
+        @media (max-width: 440px) {
+          font-size: 1rem;
+          padding-top: 1rem;
+        }
+      }
+    }
+
+    @media (max-width: 700px) {
+      gap: 0rem;  
+      margin: 0rem 0rem;
+    }
+  }    
+}

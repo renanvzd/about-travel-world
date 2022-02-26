@@ -1,0 +1,305 @@
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: relative;
+
+
+.historias {
+  max-width: 1000px;
+  margin: 5rem auto 0;
+
+  
+  .hero {
+    font-family: Inter;
+
+    .titleSection {
+      max-width: 1000px;
+      padding-bottom: 5rem;
+      
+      p {
+        font-size: 2.5rem;
+        justify-content: center;
+        text-align: center;
+        
+        & + p {
+          padding-top: 2rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .searchEngine {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+      padding-bottom: 4rem;
+      
+      align-items: center;
+      margin: 0;
+      display: flex;
+  
+      p {
+        color: #CDC8B1;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding-right: 0.8rem;
+      }
+  
+      input {
+        width: 400px;
+        height: 50px;
+        padding-left: 10px;
+        font-size: 1.2rem;
+  
+        &:hover, &:focus, &:focus {
+          border: 2px solid green !important;
+         }
+  
+      }  
+          
+    }
+
+    .containerHistory {
+      margin: 0;
+      justify-content: center;
+
+    }
+
+    .subContainerHistory {
+      max-width: 1000px;
+      background-color: #282a29; 
+      border: 2px solid;
+      padding: 30px 100px;
+      box-shadow: 0 0 1em green;
+      border-radius: 1.5rem;
+      margin-bottom: 2rem;
+
+      &:hover {
+        filter: brightness(2);
+      }
+
+      & + .subContainerHistory {
+        margin-top: 50px;
+
+      }
+
+      .titleHistory {
+        color: #F8F8F8;
+        font-size: 28px;
+        text-align: justify;
+        line-height: 33.89px;
+        font-weight: 700;
+      }
+      
+      p {
+        padding-top: 15px;
+        color: #D7D7D7;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      p:nth-of-type(1) {
+        font-weight: bold;
+        color: #50e233;
+      }
+
+    }
+
+
+  }
+
+  .subsection {
+    width: 450px;
+    height: 20px;
+    color: #BBBBBB;
+    margin-top: 35px;
+
+    .schedule {
+      padding-right: 30px;
+      display: inline-block;
+
+      span {
+        padding-left: 5px;
+      }
+    }
+
+    .author {
+      display: inline-block;
+      span {
+        padding-left: 5px;
+      }
+    }
+  }
+
+   button {
+      color: var(--highlight);
+      margin-top: 4rem;
+      font-weight: 600;
+      font-size: 1.125;
+      line-height: 1.375rem;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+
+      .loadMorePosts{
+        background-color: red;
+        p {
+          padding: 15px;
+          color: #FF57B2;
+          font-family: Inter;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    display: relative;
+  
+  .historias {
+    margin: 3rem auto 0;
+  
+    .hero {
+  
+       .titleSection {
+        max-width: 1000px;
+        padding-bottom: 2rem;
+
+        p {
+          padding-bottom: 1rem;
+          font-size: 1.5rem;
+          justify-content: center;
+          text-align: center;
+          
+          & + p {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 22px;
+          }
+        }
+      }
+
+      .searchEngine {
+        padding-bottom: 3rem;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        display: flex;
+    
+        p {
+          color: #CDC8B1;
+          font-size: 1.1rem;
+          padding-bottom: 10px;
+          text-align: left;
+          padding-right: 0rem;
+        }
+    
+        input {
+          width: 260px;
+          height: 40px;
+          font-size: 1rem;
+    
+          &:hover, &:focus, &:focus {
+            border: 2px solid green !important;
+           }
+        }  
+      }
+
+      .subContainerHistory {
+        border: 1px solid;
+        padding: 25px 20px;
+        box-shadow: 0 0 1em green;
+  
+        & + .subContainerHistory {
+          margin-top: 50px;
+  
+        }
+  
+        .titleHistory {
+          color: #F8F8F8;
+          font-size: 1.1rem;
+          text-align: justify;
+          line-height: 22px;
+          font-weight: 700;
+        }
+        
+        p {
+          padding-top: 15px;
+          color: #eeeeee;
+          text-align: justify;
+          font-weight: 400;
+          font-size: 0.9rem;
+          line-height: 18px;
+        }
+      }
+  
+  
+    }
+  
+    .subsection {
+      width: 200px;
+      height: 20px;
+      color: #e6e6e6;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  
+      .schedule {
+        padding-right: 30px;
+        display: inline-block;
+  
+        span {
+          padding-left: 5px;
+          font-size: 0.8rem;
+        }
+      }
+  
+      .author {
+        display: inline-block;
+        padding-bottom: 25px;
+
+        span {
+          padding-left: 5px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  
+     button {
+        color: var(--highlight);
+        margin-top: 4rem;
+        font-weight: 600;
+        font-size: 1.125;
+        line-height: 1.375rem;
+        transition: filter 0.2s;
+  
+        &:hover {
+          filter: brightness(0.8);
+        }
+  
+        .loadMorePosts{
+          background-color: red;
+          p {
+            padding: 15px;
+            color: #FF57B2;
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  
+}

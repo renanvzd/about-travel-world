@@ -1,0 +1,63 @@
+
+
+
+.container {
+  // max-width: 1520px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, rgba(19,236,100,1) 0%, rgba(239,255,245,1) 35%, rgba(238,238,238,1) 50%, rgba(255,235,214,1) 65%, rgba(255,130,0,1) 100%);
+  opacity: 0.95;
+
+  @media(max-width: 600px) {
+    width: 100%;
+  }
+
+  .introduction {
+    padding: 10rem 5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media(max-width: 600px) {
+      padding: 8rem 2rem 0 2rem;
+    }
+
+    > p {
+      color: black;
+      font-size: 2rem;
+      text-align: justify;
+      line-height: 45px;
+      padding-bottom: 0.5rem;
+
+      @media(max-width: 600px) {
+        font-size: 1rem;
+        line-height: 20px;
+      }
+    }
+
+    .explain {
+      display: flex;
+      padding: 1.5rem 5rem 0 2rem;
+
+      @media(max-width: 600px) {
+        padding: 1.5rem 1rem 0 1rem;
+      }
+
+      > p {
+        text-align: justify;
+        color: black;
+        font-size: 1.5rem;
+        line-height: 30px;
+
+        @media(max-width: 600px) {
+          font-size: 0.85rem;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+  }
+}

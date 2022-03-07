@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { getPrismicClient } from '../../services/prismic';
 import styles from './styles.module.scss';
 import { formatDate } from '../../utils';
+import FormHistory from '../../components/FormHistory';
 
 interface History {
   uid?: string;
@@ -85,6 +86,9 @@ export default function Historias({ historiesPagination }: HomeProps) {
               />
 
             </div>
+
+            <FormHistory />
+
             <div className={styles.containerHistory}>
               {histories?.filter((history) => {
                 if (searchTerm == "") {

@@ -1,14 +1,19 @@
 import { darken } from 'polished';
 import styled from 'styled-components';
 
-export const Container = styled.section``;
+export const Container = styled.section`
+margin-bottom: 5rem;
+
+`;
 
 export const FormContainer = styled.form`
-  margin-top: 5rem;
+  margin-top: 1rem;
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1rem; */
 
   > button {
     border: none;
@@ -17,7 +22,7 @@ export const FormContainer = styled.form`
     font-weight: 400;
     font-size: 1.2rem;
     border-radius: 0.5rem;
-    background: ${({ theme }) => theme.button};
+    background: #2FB12F;
     transition: 0.5s;
     width: fit-content;
 
@@ -25,9 +30,6 @@ export const FormContainer = styled.form`
       opacity: 0.5;
     }
 
-    &:not(:disabled):hover {
-      background: ${({ theme }) => darken(0.05, theme.button)};
-    }
   }
 
   @media (max-width: 700px) {
@@ -44,6 +46,9 @@ export const FormContainer = styled.form`
 `;
 
 export const Input = styled.input`
+  display: flex;
+  
+  justify-content: center;
   height: 3rem;
   width: 100%;
   background: ${({ theme }) => theme.inputBackground};
@@ -54,6 +59,7 @@ export const Input = styled.input`
   font-size: 1.2rem;
   outline: none;
   transition: 0.5s;
+  margin: 1rem 0;
 
   &:focus {
     border-color: ${({ theme }) => theme.primary};

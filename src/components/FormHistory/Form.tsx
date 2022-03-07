@@ -56,12 +56,12 @@ export default function Form() {
         value={title}
         onChange={({ target }) => setTitle(target.value)}
       />
-      <Input
+      <TextArea
         placeholder="Descrição"
         value={description}
         onChange={({ target }) => setDescription(target.value)}
       />
-      <TextArea
+      <Input
         placeholder="User"
         value={user}
         onChange={({ target }) => setUser(target.value)}

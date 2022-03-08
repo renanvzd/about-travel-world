@@ -8,11 +8,11 @@ export const sendHistory = async (
   const data = {
     title,
     description,
-    user
+    user,
   };
 
   try {
-    return await axios.post('ola-task.herokuapp.com/posts', data);
+    return await axios.post('http://ola-task.herokuapp.com/posts', data);
   } catch (error) {
     return error;
   }

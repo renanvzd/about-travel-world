@@ -7,7 +7,6 @@ import { FormContainer, Input, TextArea } from './styles';
 export default function Form() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [user, setUser] = useState('1');
 
   const [loading, setLoading] = useState(false);
 
@@ -15,7 +14,7 @@ export default function Form() {
     event.preventDefault();
 
     if (!title || !description) {
-      toast('Please make sure all fields are filled in correctly!', {
+      toast('Verifique se todos os campos foram preenchidos!', {
         style: {
           background: theme.error,
           color: '#fff'
@@ -26,15 +25,14 @@ export default function Form() {
 
     try {
       setLoading(true);
-      await sendHistory(title, description, user);
+      await sendHistory(title, description);
       setTitle('');
       setDescription('');
-      setUser('');
 
-      toast('Message sent!', {
+      toast('História registrada. Aguarde ser publicada!', {
         style: {
           background: theme.secondary,
-          color: '#fff'
+          color: '#000000'
         }
       });
     } catch (error) {
@@ -60,11 +58,6 @@ export default function Form() {
         placeholder="Descrição"
         value={description}
         onChange={({ target }) => setDescription(target.value)}
-      />
-      <Input
-        placeholder="User"
-        value={user}
-        onChange={({ target }) => setUser(target.value)}
       />
       <button type="submit" disabled={loading}>
         SEND

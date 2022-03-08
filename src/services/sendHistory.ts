@@ -3,12 +3,12 @@ import axios from 'axios';
 export const sendHistory = async (
   title: string,
   description: string,
-  user: string
 ) => {
   const data = {
     title,
     description,
-    user,
+    type: 'OTHER',
+    user: { id: '11' }
   };
 
   try {

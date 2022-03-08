@@ -12,7 +12,7 @@ export const sendHistory = async (
   };
 
   try {
-    return await axios.post('http://ola-task.herokuapp.com/posts', data);
+    return await axios.post('https://ola-task.herokuapp.com/posts', data);
   } catch (error) {
     return error;
   }
